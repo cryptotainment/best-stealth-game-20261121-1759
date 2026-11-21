@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shadow Vault — Stealth Heist</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #0b0e14; }
+  body { display: flex; align-items: center; justify-content: center; }
+  #game {
+    display: block;
+    width: min(100vw, calc(100vh * 1.5));
+    height: min(100vh, calc(100vw / 1.5));
+    background: #1d2431;
+    touch-action: none;
+  }
+  /* Read aloud, never shown: the status line screen readers announce. */
+  #status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+</style>
+</head>
+<body>
+<canvas id="game" width="960" height="640" aria-label="Shadow Vault: a top-down stealth heist. Sneak past the guards, collect three code shards, and reach the exit unseen."></canvas>
+<p id="status" role="status" aria-live="polite"></p>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
